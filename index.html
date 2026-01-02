@@ -2,936 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Amrutha Gyanam – Security Enthusiast</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Amrutha Gyanam – Data & Cybersecurity Analyst specializing in threat investigations, IoT misuse, and cyberstalking research." />
-  <style>
-    :root {
-      --dark-bg: #050816;
-      --dark-accent: #0b1220;
-      --primary: #3b82f6;
-      --primary-soft: rgba(59, 130, 246, 0.12);
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --border-subtle: rgba(148, 163, 184, 0.35);
-      --card-bg: #131b2c;
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.7);
-      --radius-lg: 18px;
-      --radius-pill: 999px;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apple AirTag Crime & Misuse Risk Analysis</title>
 
-    * {
-      box-sizing: border-box;
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
       margin: 0;
       padding: 0;
-    }
-
-    body {
-      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color: var(--text-main);
-      background: radial-gradient(circle at top left, #020617 0, #020617 45%, #020617 80%);
       line-height: 1.6;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ---------- Layout ---------- */
-
-    .wrapper {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 1.25rem 4rem;
-    }
-
     header {
-      background: radial-gradient(circle at top left, #1d4ed8 0, #020617 55%, #000 100%);
-      color: #e5e7eb;
-      padding: 1.25rem 1.25rem 3rem;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85);
-      position: relative;
-      overflow: hidden;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #020617, #020617);
     }
-
-    header::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.12) 0, transparent 55%),
-        radial-gradient(circle at 80% 0%, rgba(37, 99, 235, 0.18) 0, transparent 55%),
-        radial-gradient(circle at 50% 120%, rgba(59, 130, 246, 0.12) 0, transparent 60%);
-      opacity: 0.9;
-      pointer-events: none;
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
-
-    .nav {
-      max-width: 1120px;
-      margin: 0 auto 1.5rem;
-      padding: 0 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .nav-logo {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .nav-logo span.symbol {
-      width: 26px;
-      height: 26px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #22c55e, #0ea5e9);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: #020617;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      font-size: 0.9rem;
-      color: #cbd5f5;
-    }
-
-    .nav-links a {
-      opacity: 0.85;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #38bdf8, #6366f1);
-      transition: width 0.2s ease-out;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .hero {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 1.25rem 0;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 2.5rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-title {
-      font-size: clamp(2rem, 3vw, 2.4rem);
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: #e5e7eb;
-    }
-
-    .hero-subtitle {
-      font-size: 0.98rem;
-      color: #cbd5f5;
-      max-width: 32rem;
-      margin-bottom: 1.4rem;
-    }
-
-    .hero-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .chip {
-      padding: 0.25rem 0.9rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      font-size: 0.75rem;
-      color: #cbd5f5;
-      background: rgba(15, 23, 42, 0.4);
-      backdrop-filter: blur(8px);
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .btn-primary {
-      padding: 0.6rem 1.2rem;
-      border-radius: var(--radius-pill);
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, #2563eb, #0ea5e9);
-      color: white;
-      font-size: 0.9rem;
-      font-weight: 600;
-      box-shadow: 0 16px 30px rgba(37, 99, 235, 0.35);
-    }
-
-    .btn-secondary {
-      padding: 0.55rem 1.15rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      cursor: pointer;
-      background: transparent;
-      color: #e5e7eb;
-      font-size: 0.88rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 0.25rem;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top, rgba(37, 99, 235, 0.18) 0, rgba(15, 23, 42, 0.98) 50%);
-      border-radius: 1.5rem;
-      padding: 1.4rem 1.4rem 1.6rem;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #e5e7eb;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 110% -10%, rgba(52, 211, 153, 0.3) 0, transparent 50%);
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    .hero-card-title {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #93c5fd;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-card-main {
+    header p {
+      max-width: 850px;
+      margin: 0.5rem auto 0;
       font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-    }
-
-    .hero-card-body {
-      font-size: 0.8rem;
       color: #cbd5f5;
-      margin-bottom: 0.8rem;
     }
-
-    .hero-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      font-size: 0.72rem;
-    }
-
-    .hero-card-tag {
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-pill);
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-    }
-
-    /* ---------- Sections ---------- */
-
     section {
-      margin-bottom: 2.75rem;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2.5rem 1.5rem;
     }
-
-    .section-header {
-      margin-bottom: 1.4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 1rem;
-      flex-wrap: wrap;
+    h2 {
+      color: #93c5fd;
+      margin-bottom: 1rem;
     }
-
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+    ul {
+      padding-left: 1.2rem;
     }
-
-    .section-title span.dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--primary);
-    }
-
-    .section-subtitle {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .grid-two {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-      gap: 1.75rem;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 1.3rem 1.4rem;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.45);
-      color: #e5e7eb;
-    }
-
-    .chip-soft {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.7rem;
-      border-radius: var(--radius-pill);
-      background: rgba(59,130,246,0.15);
-      color: #dbeafe;
-      border: 1px solid rgba(59,130,246,0.35);
-      display: inline-block;
+    li {
       margin-bottom: 0.6rem;
     }
-
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
+    .card {
+      background-color: #020617;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #1e293b;
     }
-
-    .card p {
-      font-size: 0.88rem;
-      color: #d1d5db;
-      margin-bottom: 0.45rem;
-    }
-
-    ul {
-      padding-left: 1.1rem;
-      font-size: 0.86rem;
-      color: #cbd5f5;
-    }
-
-    ul li + li {
-      margin-top: 0.25rem;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.4rem;
-    }
-
-    .pill {
-      padding: 0.18rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(59,130,246,0.12);
-      border: 1px solid rgba(59,130,246,0.4);
-      font-size: 0.76rem;
-      color: #bfdbfe;
-    }
-
-    /* Artifacts list */
-
-    .artifact-list {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-      gap: 1rem;
-    }
-
-    .artifact {
-      background: #020617;
-      border-radius: 14px;
-      padding: 0.9rem 1rem;
-      border: 1px solid rgba(148,163,184,0.5);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.75rem;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.7);
-    }
-
-    .artifact-main {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .artifact-sub {
-      font-size: 0.78rem;
-      color: #9ca3af;
-    }
-
-    .artifact a.btn-link {
-      font-size: 0.8rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--primary);
-      color: #dbeafe;
-      background: rgba(37,99,235,0.15);
-      white-space: nowrap;
-    }
-
-    .artifact a.btn-link:hover {
-      background: rgba(37,99,235,0.3);
-    }
-
-    /* Skills */
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 0.8rem;
-    }
-
-    .skill-card {
-      background: #020617;
-      border-radius: 14px;
-      padding: 0.8rem 0.9rem;
-      border: 1px solid rgba(148,163,184,0.5);
-      font-size: 0.82rem;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.7);
-    }
-
-    .skill-card h4 {
-      font-size: 0.9rem;
-      margin-bottom: 0.25rem;
-      color: #e5e7eb;
-    }
-
-    .skill-card p {
-      font-size: 0.8rem;
-      color: #d1d5db;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-top: 0.35rem;
-    }
-
-    .skill-tag {
-      padding: 0.15rem 0.55rem;
-      border-radius: var(--radius-pill);
-      background: rgba(59,130,246,0.2);
-      color: #e5e7ff;
-      font-size: 0.72rem;
-      border: 1px solid rgba(129, 140, 248, 0.6);
-    }
-
-    /* Contact */
-
-    .contact-card {
-      background: #020617;
-      color: #e5e7eb;
-      border-radius: 1.25rem;
-      padding: 1.2rem 1.3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-    }
-
-    .contact-card h3 {
-      font-size: 1rem;
-    }
-
-    .contact-row {
-      font-size: 0.86rem;
-      color: #e5e7eb;
-    }
-
-    .contact-row span.label {
-      color: #9ca3af;
-      display: inline-block;
-      width: 70px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 0.25rem;
-      font-size: 0.8rem;
-    }
-
-    .contact-pill {
-      padding: 0.32rem 0.75rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: #e5e7eb;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
     footer {
       text-align: center;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
+      padding: 2rem 1rem;
       color: #9ca3af;
-      padding: 0 1.25rem 1.75rem;
-    }
-
-    /* Photo block */
-
-    .about-photo-wrapper {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    .about-photo-frame {
-      width: 260px;
-      height: 260px;
-      margin: 0 auto;
-      background: radial-gradient(circle at top, rgba(59,130,246,0.35), rgba(15,23,42,1));
-      padding: 10px;
-      border-radius: 40px;
-      transform: rotate(6deg);
-      overflow: hidden;
-      box-shadow: 0 24px 48px rgba(0,0,0,0.9);
-      border: 1px solid rgba(59,130,246,0.7);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-
-    .about-photo-frame:hover {
-      transform: rotate(0deg) scale(1.03);
-      box-shadow: 0 28px 60px rgba(37,99,235,0.7);
-      border-color: rgba(96,165,250,0.95);
-    }
-
-    .about-photo-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 30px;
-      object-fit: cover;
-      transform: rotate(-6deg);
-    }
-
-    .about-photo-caption {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #d1d5db;
-      line-height: 1.4;
-    }
-
-    /* ---------- Responsive ---------- */
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-        padding-bottom: 0;
-      }
-
-      .hero-card {
-        margin-top: 0.5rem;
-      }
-
-      .grid-two,
-      .artifact-list {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.35rem;
-      }
-
-      .nav-links {
-        font-size: 0.82rem;
-        gap: 1rem;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Header & Hero -->
-  <header>
-    <div class="nav">
-      <div class="nav-logo">
-        <span class="symbol">AG</span>
-        <span>Cyber Portfolio</span>
-      </div>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#project">AirTag Case Study</a>
-        <a href="#artifacts">Artifacts</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+<header>
+  <h1>Apple AirTag Crime & Misuse Risk Analysis</h1>
+  <p>
+    Independent academic research (sole author) examining security, privacy,
+    and misuse risks of Apple AirTags as a consumer IoT tracking technology,
+    with a focus on governance, digital safety, and public-interest risk analysis.
+  </p>
+</header>
 
-    <div class="hero">
-      <div>
-        <h1 class="hero-title">
-          Amrutha Gyanam<br />
-          <span style="font-size:0.9em; font-style:italic;">Cybersecurity Analyst</span>
-        </h1>
-        <p class="hero-subtitle">
-  I love analyzing how everyday technologies turn into security threats.	
-  This portfolio highlights a deep-dive case study into the criminal misuse of Apple AirTags in cyberstalking, auto theft, and digital surveillance.
-  
-</p>
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    This project is an independently conducted academic research study analyzing
+    the security, privacy, and misuse risks associated with Apple AirTags.
+    While AirTags are designed to help users locate personal belongings,
+    their Bluetooth-based proximity tracking and reliance on a large community
+    network introduce risks related to unauthorized tracking, stalking,
+    and vehicle theft.
+  </p>
+  <p>
+    The research combines technical analysis, legal and constitutional study,
+    law-enforcement consultation, and governance-focused risk assessment
+    to identify control gaps and propose mitigation strategies aligned with
+    privacy, accountability, and public safety principles.
+  </p>
+</section>
 
+<section>
+  <h2>Technology Background</h2>
+  <div class="card">
+    <p>
+      Apple AirTag is a Bluetooth Low Energy (BLE) tracking device released in 2021.
+      It operates through Apple’s <em>Find My</em> network, where nearby Apple devices
+      anonymously relay location information using end-to-end encryption.
+      AirTags do not contain GPS; instead, they rely on proximity-based detection
+      within the Apple ecosystem.
+    </p>
+    <p>
+      Supported devices leverage Ultra-Wideband (UWB) technology through the U1 chip
+      to enable Precision Finding. While Apple emphasizes privacy-by-design,
+      the effectiveness of these protections depends on ecosystem participation,
+      device compatibility, and user awareness.
+    </p>
+  </div>
+</section>
 
-        <div class="hero-chip-row">
-          <span class="chip">Threat Investigation</span>
-          <span class="chip">IoT & AirTag Security</span>
-          <span class="chip">Digital Privacy & Safety</span>
-          <span class="chip">Cyberstalking Research</span>
-        </div>
+<section>
+  <h2>Risk & Misuse Scenarios</h2>
+  <div class="card">
+    <ul>
+      <li>Covert placement of AirTags on vehicles or personal belongings without consent</li>
+      <li>Stalking and intimate-partner abuse enabled by prolonged unauthorized tracking</li>
+      <li>Vehicle theft facilitated through pre-tracking of high-value targets</li>
+      <li>Delayed or missed alerts, particularly for non-Apple users</li>
+      <li>Confusion between false positives and real threats leading to delayed response</li>
+    </ul>
+  </div>
+</section>
 
-        <div class="hero-cta">
-          <a href="#project"><button class="btn-primary">View AirTag Case Study</button></a>
-          <a href="#artifacts"><button class="btn-secondary">Download Whitepaper &amp; Slides →</button></a>
-        </div>
-        <p class="hero-note">
-          Academic research (2022) evolved into a professional-grade case study for SOC & cyber roles.
-        </p>
-      </div>
+<section>
+  <h2>Legal & Law-Enforcement Context</h2>
+  <div class="card">
+    <ul>
+      <li>Studied U.S. constitutional privacy principles including consent and reasonable expectation of privacy</li>
+      <li>Reviewed legal challenges in prosecuting technology-enabled stalking cases</li>
+      <li>Independently engaged in informational discussions with the Murray City Police Department
+          (under faculty supervision) to understand reporting workflows and investigative constraints</li>
+      <li>Identified gaps between technical detection mechanisms and legal response capabilities</li>
+    </ul>
+  </div>
+</section>
 
-      <div class="hero-card">
-        <div class="hero-card-title">Featured Investigation</div>
-        <div class="hero-card-main">AirTags in Criminal Use</div>
-        <div class="hero-card-body">
-          A multi-layered analysis of how consumer tracking devices like Apple AirTags are misused in
-          cyberstalking, auto theft, and IoT-enabled surveillance — combining technical, behavioral,
-          and legal perspectives.
-        </div>
-        <div class="hero-card-tags">
-          <span class="hero-card-tag">Bluetooth LE & UWB</span>
-          <span class="hero-card-tag">Cyberstalking</span>
-          <span class="hero-card-tag">Auto Theft Targeting</span>
-          <span class="hero-card-tag">Anti-Stalking Design</span>
-        </div>
-      </div>
-    </div>
-  </header>
+<section>
+  <h2>Governance & Control Gaps</h2>
+  <div class="card">
+    <ul>
+      <li>Limited cross-platform detection for non-Apple users</li>
+      <li>Inconsistent user awareness and response guidance</li>
+      <li>Reliance on post-incident alerts rather than preventive safeguards</li>
+      <li>Absence of clear policy frameworks for digitally assisted stalking cases</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- Main content -->
-  <main class="wrapper">
+<section>
+  <h2>Risk Mitigation & Recommendations</h2>
+  <div class="card">
+    <ul>
+      <li>Strengthen cross-platform tracking detection and alert mechanisms</li>
+      <li>Improve public education on tracking risks and response actions</li>
+      <li>Enhance collaboration between technology providers and law enforcement</li>
+      <li>Incorporate privacy-by-design controls to reduce silent tracking misuse</li>
+      <li>Develop governance and policy guidance for digital stalking investigations</li>
+    </ul>
+  </div>
+</section>
 
-    <!-- About -->
-    <section id="about">
-      <div class="section-header">
-        <div class="section-title">
-          <span class="dot"></span>
-          <span>About Me</span>
-        </div>
-        <p class="section-subtitle">
-          Cybersecurity analyst with a strong foundation in research, digital safety, and real-world threat scenarios.
-        </p>
-      </div>
+<section>
+  <h2>Tools & Methods</h2>
+  <div class="card">
+    <ul>
+      <li>Technical documentation and platform behavior analysis</li>
+      <li>Legal and constitutional research</li>
+      <li>Law-enforcement advisory and case-study review</li>
+      <li>Academic literature analysis</li>
+      <li>Risk and governance modeling</li>
+      <li>Microsoft Word and PowerPoint for structured reporting</li>
+    </ul>
+  </div>
+</section>
 
-      <div class="grid-two">
-        <!-- PROFILE CARD -->
-        <div class="card">
-          <span class="chip-soft">Profile</span>
-          <h3>Cybersecurity & Digital Safety Focus</h3>
-         <p>
-  I’m a cybersecurity and data governance analyst focused on protecting people, data, and cloud ecosystems.
-  My work spans <strong>cyberstalking and IoT-misuse investigations, IAM and access governance, and end-to-end data security across cloud platforms</strong>,
-  always centering how real people experience digital risk and safety.
-</p>
+<section>
+  <h2>About the Research</h2>
+  <div class="card">
+    <p>
+      This research was independently conducted by the author as a sole researcher
+      under academic supervision as part of graduate studies in cybersecurity
+      and information assurance. The project reflects a professional interest
+      in governance, privacy, data protection, and the societal impact of
+      emerging technologies.
+    </p>
+  </div>
+</section>
 
-<p>
-  Originally developed as my graduate research project, this AirTag investigation has since been expanded into a
-  <strong>professional threat-analysis portfolio</strong> aligned with SOC operations, threat intelligence,
-  cloud security, and digital forensics roles.
-</p>
+<footer>
+  <p>
+    This research is analytical and observational in nature and does not involve
+    unauthorized access, exploitation, or modification of devices.
+  </p>
+</footer>
 
-          <h4 style="margin-top:1rem; font-size:0.95rem;">Certifications</h4>
-          <ul>
-            <li><strong>CompTIA Security+ (SY0-701)</strong></li>
-            <li><strong>Ethical Hacking – LinkedIn Learning</strong></li>
-            <li><strong>(ISC)² Member</strong> – Cybersecurity Candidate (ID: 1883857)</li>
-            <li><strong>Microsoft Security Operations Analyst (SC-200)</strong> – In Progress</li>
-          </ul>
-
-          <h4 style="margin-top:1rem; font-size:0.95rem;">Cloud Credentials</h4>
-          <ul>
-            <li><strong>AWS Solutions Architect – Associate</strong></li>
-            <li><strong>Microsoft Azure Fundamentals</strong></li>
-          </ul>
-
-          <h4 style="margin-top:1rem; font-size:0.95rem;">AI & Emerging Tech</h4>
-          <ul>
-            <li><strong>Introduction to Generative AI – Google Cloud</strong></li>
-          </ul>
-
-          <h4 style="margin-top:1rem; font-size:0.95rem;">Legal & Policy</h4>
-          <ul>
-            <li><strong>Introduction to American Law – University of Pennsylvania</strong></li>
-          </ul>
-
-          <h4 style="margin-top:1rem; font-size:0.95rem;">Recognition</h4>
-          <ul>
-            <li><strong>LinkedIn Top Voice 2024 – Data Analytics</strong></li>
-          </ul>
-        </div>
-
-        <!-- HIGHLIGHTS CARD -->
-        <div class="card">
-          <span class="chip-soft">Highlights</span>
-          <h3>Key Themes in My Work</h3>
-          <ul>
-            <li>Dual-use technology risk: how helpful devices become tools for abuse.</li>
-            <li>Victim-centric lens: fear, safety, and reporting challenges in stalking cases.</li>
-            <li>Technical exploitation: firmware tampering, silent mode attacks, and BLE misuse.</li>
-            <li>Bridging research & practice: turning academic insights into SOC-ready artifacts.</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">Cyberstalking & Harassment</span>
-            <span class="pill">IoT & Bluetooth Tracking</span>
-            <span class="pill">Threat Modeling</span>
-            <span class="pill">Digital Evidence Awareness</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PHOTO BLOCK -->
-      <div class="about-photo-wrapper">
-        <div class="about-photo-frame">
-          <img src="amrutha_cropped.jpg" alt="Amrutha Gyanam" class="about-photo-img">
-        </div>
-
-        <p class="about-photo-caption">
-          I enjoy exploring how everyday technologies shape people’s safety,<br>
-          and I love turning complex cyber risks into simple, human stories.
-        </p>
-      </div>
-    </section>
-
-    <!-- AirTag Project -->
-    <section id="project">
-      <div class="section-header">
-        <div class="section-title">
-          <span class="dot"></span>
-          <span>Case Study: AirTag Crime Analysis</span>
-        </div>
-        <p class="section-subtitle">
-          A deep-dive into how Apple AirTags are misused for stalking, vehicle theft, and covert tracking.
-        </p>
-      </div>
-
-      <div class="grid-two">
-        <div class="card">
-          <span class="chip-soft">Scope & Questions</span>
-          <h3>Research Focus</h3>
-          <p>
-            This case study analyzes Apple AirTags as a <strong>dual-use IoT tracking technology</strong>.
-            The goal is to understand:
-          </p>
-          <ul>
-            <li>How AirTags technically work (Bluetooth LE, U1, Find My network).</li>
-            <li>How attackers repurpose them for stalking and auto theft.</li>
-            <li>Where current anti-stalking protections fail victims.</li>
-            <li>What design, policy, and user-level changes can reduce harm.</li>
-          </ul>
-          <p>
-            The project combines <strong>technical analysis</strong>, <strong>behavioral research on stalking</strong>,
-            and <strong>real-world case reports</strong> into one cohesive security narrative.
-          </p>
-        </div>
-
-        <div class="card">
-          <span class="chip-soft">Tech & Threats</span>
-          <h3>Key Technical & Criminal Insights</h3>
-          <ul>
-            <li>AirTags lack GPS but leverage a <strong>crowdsourced Apple device mesh</strong> for location relay.</li>
-            <li>Attackers can modify firmware, remove speakers, or clone identifiers for <strong>silent, persistent tracking</strong>.</li>
-            <li>Cross-platform gaps: iOS users get better alerts than Android users, creating <strong>asymmetric victim protection</strong>.</li>
-            <li>Auto theft operations attach tags to vehicles in public areas and use them to track cars home.</li>
-          </ul>
-          <p>
-            The output is structured as a whitepaper, briefing deck, and can be easily adapted into
-            <strong>SOC playbooks, training content, or awareness material</strong>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Artifacts -->
-    <section id="artifacts">
-      <div class="section-header">
-        <div class="section-title">
-          <span class="dot"></span>
-          <span>Project Artifacts</span>
-        </div>
-        <p class="section-subtitle">
-          Downloadable assets you can share with hiring managers, security teams, or academic reviewers.
-        </p>
-      </div>
-
-      <div class="artifact-list">
-        <div class="artifact">
-          <div>
-            <div class="artifact-main">AirTags in Criminal Use – Whitepaper</div>
-            <div class="artifact-sub">
-              Professional cybersecurity report covering stalking, auto theft, and IoT-enabled surveillance risks.
-            </div>
-          </div>
-          <a class="btn-link" href="Amrutha_AirTag_Whitepaper.pdf" target="_blank">Download PDF</a>
-        </div>
-
-        <div class="artifact">
-          <div>
-            <div class="artifact-main">Briefing Deck – AirTag Crime Analysis</div>
-            <div class="artifact-sub">
-              Presentation-ready slides for interviews, portfolio reviews, or conference-style talks.
-            </div>
-          </div>
-          <a class="btn-link" href="Amrutha_AirTag_Presentation.pptx" target="_blank">Download PPTX</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <div class="section-header">
-        <div class="section-title">
-          <span class="dot"></span>
-          <span>Security Skills Spotlight</span>
-        </div>
-        <p class="section-subtitle">
-          Skills you can confidently bring to a SOC, cyber defense, or digital safety team.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h4>Threat & Abuse Analysis</h4>
-          <p>
-            Mapping how everyday technologies are turned into tools for harassment, stalking, and surveillance.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">Cyberstalking</span>
-            <span class="skill-tag">Risk Assessment</span>
-            <span class="skill-tag">Threat Modeling</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h4>IoT & Bluetooth Tracking</h4>
-          <p>
-            Understanding the behavior of consumer tracking devices and their misuse pathways.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">Bluetooth LE</span>
-            <span class="skill-tag">Find My Network</span>
-            <span class="skill-tag">IoT Abuse</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h4>Communication & Reporting</h4>
-          <p>
-            Producing whitepapers, briefings, and case summaries that are accessible to both technical and non-technical audiences.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">Whitepapers</span>
-            <span class="skill-tag">Executive Briefings</span>
-            <span class="skill-tag">Stakeholder Education</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h4>Victim-Centric Security</h4>
-          <p>
-            Centering victim safety, law enforcement collaboration, and practical mitigations in threat recommendations.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">Digital Safety</span>
-            <span class="skill-tag">Awareness Training</span>
-            <span class="skill-tag">Policy Insight</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="section-header">
-        <div class="section-title">
-          <span class="dot"></span>
-          <span>Contact & Links</span>
-        </div>
-        <p class="section-subtitle">
-          Open to roles where cybersecurity, research, and protecting people from digital harm intersect.
-        </p>
-      </div>
-
-      <div class="grid-two">
-        <div class="contact-card">
-          <h3>Let’s Collaborate on Cyber Safety</h3>
-          <p>
-            If you’re building security products, digital safety features, or want to better understand cyberstalking and IoT misuse,
-            I’d be happy to walk you through this case study or adapt it to your environment.
-          </p>
-          <div class="contact-row">
-            <span class="label">Email</span>
-            <span>amrutagyanam@gmail.com</span>
-          </div>
-          <div class="contact-row">
-            <span class="label">Location</span>
-            <span>Austin, TX (Open to remote)</span>
-          </div>
-          <div class="contact-links">
-            <span class="contact-pill">LinkedIn: www.linkedin.com/in/amruta-s</span>
-            <span class="contact-pill">GitHub: airtag-crime-analysis</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    © <span id="year"></span> Amrutha Gyanam · Cybersecurity Analyst · AirTag Crime Analysis Portfolio
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
-
-
-
-
-
-
