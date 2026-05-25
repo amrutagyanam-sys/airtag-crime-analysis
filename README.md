@@ -1,4 +1,5 @@
-# AirTag Criminal Misuse – Cybersecurity & Data Governance Portfolio  
+#  Tracking or Stalking?
+## A Cybersecurity Research Brief on Apple AirTag Misuse 
 **Author:** Amrutha Gyanam  
 **Role:** Cybersecurity • Data Governance • IAM • Cloud Security  
 
@@ -8,7 +9,13 @@ This repository contains my professional case study on the criminal misuse of Ap
 What began as my graduate research project has evolved into a **professional threat-analysis portfolio** 
 aligned with SOC operations, threat intelligence, digital forensics, data governance, IAM, and cloud security roles.
 
-
+# Key Topics
+- Apple AirTag misuse in cyberstalking and unauthorized tracking
+- Bluetooth LE and Find My network privacy concerns
+- Anti-stalking alert limitations across iOS and Android users
+- IoT-enabled crime and vehicle tracking risks
+- Privacy, consent, safety, and governance gaps
+- Mitigation recommendations for users, manufacturers, and policymakers
 
 ## 🛡 About Me
 
@@ -19,6 +26,6 @@ data security across cloud platforms** — always centering how real people expe
 ---
 
 ## 📬 Contact
-- **Email:** amrutagyanam@gmail.com  
+- **Email:** amrutag.csa@gmail.com  
 - **LinkedIn:** https://www.linkedin.com/in/amruta-s  
-- **Location:** Austin, TX  
+- **Location:** Dallas, TX  
