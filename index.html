@@ -1,11 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Amrutha Gyanam – Security Enthusiast</title>
+  <title>Amrutha Gyanam – Data Governance & Data Security Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Amrutha Gyanam – Data & Cybersecurity Analyst specializing in threat investigations, IoT misuse, and cyberstalking research." />
+  <meta
+    name="description"
+    content="Portfolio of Amrutha Gyanam – Data Governance and Data Security professional focused on metadata management, IAM, cloud data security, audit readiness, compliance reporting, and cybersecurity research."
+  />
+
   <style>
     :root {
       --dark-bg: #050816;
@@ -27,8 +30,12 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text-main);
       background: radial-gradient(circle at top left, #020617 0, #020617 45%, #020617 80%);
       line-height: 1.6;
@@ -38,8 +45,6 @@
       color: inherit;
       text-decoration: none;
     }
-
-    /* ---------- Layout ---------- */
 
     .wrapper {
       max-width: 1120px;
@@ -102,36 +107,31 @@
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
-      font-size: 0.9rem;
+      gap: 1rem;
+      font-size: 0.88rem;
       color: #cbd5f5;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
-      opacity: 0.85;
+      opacity: 1;
       position: relative;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
+      padding: 0.25rem 0.6rem;
       border-radius: 999px;
-      background: linear-gradient(90deg, #38bdf8, #6366f1);
-      transition: width 0.2s ease-out;
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.25);
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
+    .nav-links a:hover {
+      background: rgba(59, 130, 246, 0.22);
+      color: #ffffff;
     }
 
     .hero {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 0 1.25rem 0;
+      padding: 0 1.25rem;
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
       gap: 2.5rem;
@@ -147,10 +147,16 @@
       color: #e5e7eb;
     }
 
+    .hero-title span {
+      font-size: 0.55em;
+      font-style: italic;
+      color: #cbd5f5;
+    }
+
     .hero-subtitle {
       font-size: 0.98rem;
       color: #cbd5f5;
-      max-width: 32rem;
+      max-width: 34rem;
       margin-bottom: 1.4rem;
     }
 
@@ -181,20 +187,18 @@
     .btn-primary {
       padding: 0.6rem 1.2rem;
       border-radius: var(--radius-pill);
-      border: none;
-      cursor: pointer;
       background: linear-gradient(135deg, #2563eb, #0ea5e9);
       color: white;
       font-size: 0.9rem;
       font-weight: 600;
       box-shadow: 0 16px 30px rgba(37, 99, 235, 0.35);
+      display: inline-block;
     }
 
     .btn-secondary {
       padding: 0.55rem 1.15rem;
       border-radius: var(--radius-pill);
       border: 1px solid rgba(148, 163, 184, 0.7);
-      cursor: pointer;
       background: transparent;
       color: #e5e7eb;
       font-size: 0.88rem;
@@ -244,7 +248,7 @@
     }
 
     .hero-card-body {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: #cbd5f5;
       margin-bottom: 0.8rem;
     }
@@ -262,8 +266,6 @@
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(148, 163, 184, 0.7);
     }
-
-    /* ---------- Sections ---------- */
 
     section {
       margin-bottom: 2.75rem;
@@ -361,7 +363,29 @@
       color: #bfdbfe;
     }
 
-    /* Artifacts list */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      background: #020617;
+      border-radius: 14px;
+      padding: 1rem;
+      border: 1px solid rgba(148,163,184,0.5);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.7);
+    }
+
+    .project-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-card p {
+      font-size: 0.82rem;
+      color: #d1d5db;
+    }
 
     .artifact-list {
       display: grid;
@@ -405,8 +429,6 @@
       background: rgba(37,99,235,0.3);
     }
 
-    /* Skills */
-
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -449,8 +471,6 @@
       border: 1px solid rgba(129, 140, 248, 0.6);
     }
 
-    /* Contact */
-
     .contact-card {
       background: #020617;
       color: #e5e7eb;
@@ -475,7 +495,7 @@
     .contact-row span.label {
       color: #9ca3af;
       display: inline-block;
-      width: 70px;
+      width: 75px;
     }
 
     .contact-links {
@@ -496,14 +516,16 @@
       gap: 0.3rem;
     }
 
+    .contact-pill:hover {
+      background: rgba(59, 130, 246, 0.22);
+    }
+
     footer {
       text-align: center;
       font-size: 0.78rem;
       color: #9ca3af;
       padding: 0 1.25rem 1.75rem;
     }
-
-    /* Photo block */
 
     .about-photo-wrapper {
       margin-top: 2rem;
@@ -545,12 +567,9 @@
       line-height: 1.4;
     }
 
-    /* ---------- Responsive ---------- */
-
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
-        padding-bottom: 0;
       }
 
       .hero-card {
@@ -567,29 +586,40 @@
       .nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.35rem;
+        gap: 0.45rem;
       }
 
       .nav-links {
         font-size: 0.82rem;
-        gap: 1rem;
+        gap: 0.5rem;
+      }
+
+      .artifact {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .about-photo-frame {
+        width: 220px;
+        height: 220px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Header & Hero -->
   <header>
     <div class="nav">
       <div class="nav-logo">
         <span class="symbol">AG</span>
-        <span>Cyber Portfolio</span>
+        <span>Professional Portfolio</span>
       </div>
+
       <nav class="nav-links">
         <a href="#about">About</a>
-        <a href="#project">AirTag Case Study</a>
-        <a href="#artifacts">Artifacts</a>
+        <a href="#projects">Projects</a>
+        <a href="#airtag">AirTag Study</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -599,53 +629,53 @@
       <div>
         <h1 class="hero-title">
           Amrutha Gyanam<br />
-          <span style="font-size:0.6em; font-style:italic;"> Data Security & Governance Analyst </span>
+          <span>Data Governance • Data Security • IAM • Cloud Security</span>
         </h1>
-        <p class="hero-subtitle">
-I analyze how everyday technologies create privacy, safety, and governance risks.
-  This portfolio focuses on an independent case study examining the misuse of Apple AirTags in stalking, vehicle theft, and unauthorized tracking scenarios.
-  
-</p>
 
+        <p class="hero-subtitle">
+          I work at the intersection of data governance, data security, access governance,
+          compliance reporting, and cybersecurity research. This portfolio highlights selected
+          work across metadata management, sensitive data protection, audit readiness,
+          cloud security, and privacy-focused technology analysis.
+        </p>
 
         <div class="hero-chip-row">
-          <span class="chip">Threat Investigation</span>
-          <span class="chip">IoT & AirTag Security</span>
-          <span class="chip">Digital Privacy & Safety</span>
-          <span class="chip">Cyberstalking Research</span>
+          <span class="chip">Data Governance</span>
+          <span class="chip">Data Security</span>
+          <span class="chip">IAM & Access Governance</span>
+          <span class="chip">Cloud Security</span>
+          <span class="chip">Cybersecurity Research</span>
         </div>
 
         <div class="hero-cta">
-          <a href="#project"><button class="btn-primary">View AirTag Case Study</button></a>
-          <a href="#artifacts"><button class="btn-secondary">Download Whitepaper &amp; Slides →</button></a>
+          <a class="btn-primary" href="#projects">View Portfolio Projects</a>
+          <a class="btn-secondary" href="#airtag">View AirTag Research →</a>
         </div>
+
         <p class="hero-note">
-          Independent graduate research (2022) refined into a professional case study focused on governance, privacy, and digital safety risk analysis.
+          Dallas, TX · Open to data governance, data security, IAM/GRC, and cloud governance roles.
         </p>
       </div>
 
       <div class="hero-card">
-        <div class="hero-card-title">Featured Investigation</div>
-        <div class="hero-card-main">AirTags in Criminal Use</div>
+        <div class="hero-card-title">Portfolio Focus</div>
+        <div class="hero-card-main">Governance, Security & Responsible Technology</div>
         <div class="hero-card-body">
-          A multi-layered analysis of how consumer tracking devices like Apple AirTags are misused in
-          cyberstalking, auto theft, and IoT-enabled surveillance - combining technical, behavioral,
-          and legal perspectives.
+          My work connects metadata, access, classification, data quality, remediation, and audit evidence
+          with practical security outcomes. The AirTag study is included as an academic cybersecurity research project.
         </div>
         <div class="hero-card-tags">
-          <span class="hero-card-tag">Bluetooth LE & UWB</span>
-          <span class="hero-card-tag">Cyberstalking</span>
-          <span class="hero-card-tag">Auto Theft Targeting</span>
-          <span class="hero-card-tag">Anti-Stalking Design</span>
+          <span class="hero-card-tag">Metadata & Lineage</span>
+          <span class="hero-card-tag">Access Reviews</span>
+          <span class="hero-card-tag">Compliance Reporting</span>
+          <span class="hero-card-tag">Privacy Risk</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Main content -->
   <main class="wrapper">
 
-    <!-- About -->
     <section id="about">
       <div class="section-header">
         <div class="section-title">
@@ -653,60 +683,39 @@ I analyze how everyday technologies create privacy, safety, and governance risks
           <span>About Me</span>
         </div>
         <p class="section-subtitle">
-          Cybersecurity Research analyst with a strong foundation in research, digital safety, and real-world threat scenarios.
+          Data governance and data security professional with a cybersecurity foundation.
         </p>
       </div>
 
       <div class="grid-two">
-        <!-- PROFILE CARD -->
         <div class="card">
           <span class="chip-soft">Profile</span>
-          <h3>Cybersecurity & Digital Safety Focus</h3>
-         <p>
+          <h3>Data Governance & Data Security Focus</h3>
 
-  Hi, I’m Amrutha - a cybersecurity and data governance professional with a background in
-  information security, identity and access governance, and data protection.
-  I focus on understanding how technology, policy, and design choices affect real people,
-  particularly in areas involving privacy, digital safety, and misuse risk.
-</p>
+          <p>
+            I am a data governance and data security professional focused on metadata management,
+            sensitive data classification, access governance, cloud data security, audit readiness,
+            and compliance reporting.
+          </p>
 
-<p>
-  My work spans governance, risk, and compliance (GRC), access reviews, audit support,
-  and security documentation across enterprise and cloud environments.
-  Alongside my professional experience, I conduct independent research that explores
-  the real-world impact of emerging technologies.
-</p>
+          <p>
+            My work includes supporting business glossaries, data dictionaries, ownership mapping,
+            CDE tracking, lineage validation, data quality controls, access reviews, remediation dashboards,
+            and audit evidence documentation.
+          </p>
 
-<p>
-  This site highlights an independent research project analyzing the misuse of Apple AirTags,
-  where I examined technical behavior, legal context, and law-enforcement challenges to
-  identify governance gaps and propose risk-mitigation recommendations aligned with
-  privacy and public-interest principles.
-</p>
-
+          <p>
+            I also conduct academic cybersecurity research focused on privacy risk, digital safety,
+            IoT misuse, and responsible technology governance.
+          </p>
 
           <h4 style="margin-top:1rem; font-size:0.95rem;">Certifications</h4>
           <ul>
             <li><strong>CompTIA Security+ (SY0-701)</strong></li>
-            <li><strong>Ethical Hacking – LinkedIn Learning</strong></li>
-            <li><strong>(ISC)² Member</strong> – Cybersecurity Candidate (ID: 1883857)</li>
-            <li><strong>Microsoft Security Operations Analyst (SC-200)</strong> – In Progress</li>
-          </ul>
-
-          <h4 style="margin-top:1rem; font-size:0.95rem;">Cloud Credentials</h4>
-          <ul>
-            <li><strong>AWS Solutions Architect – Associate</strong></li>
-            <li><strong>Microsoft Azure Fundamentals</strong></li>
-          </ul>
-
-          <h4 style="margin-top:1rem; font-size:0.95rem;">AI & Emerging Tech</h4>
-          <ul>
-            <li><strong>Introduction to Generative AI – Google Cloud</strong></li>
-          </ul>
-
-          <h4 style="margin-top:1rem; font-size:0.95rem;">Legal & Policy</h4>
-          <ul>
-            <li><strong>Introduction to American Law – University of Pennsylvania</strong></li>
+            <li><strong>AWS Certified Solutions Architect – Associate</strong></li>
+            <li><strong>Microsoft Azure Fundamentals (AZ-900)</strong></li>
+            <li><strong>Certified Data Management Professional (CDMP)</strong> – In Progress</li>
+            <li><strong>(ISC)² Cybersecurity Candidate</strong></li>
           </ul>
 
           <h4 style="margin-top:1rem; font-size:0.95rem;">Recognition</h4>
@@ -715,193 +724,273 @@ I analyze how everyday technologies create privacy, safety, and governance risks
           </ul>
         </div>
 
-        <!-- HIGHLIGHTS CARD -->
         <div class="card">
-          <span class="chip-soft">Highlights</span>
-          <h3>Key Themes in My Work</h3>
+          <span class="chip-soft">Core Strengths</span>
+          <h3>What I Bring</h3>
           <ul>
-            <li>Dual-use technology risk: how helpful devices become tools for abuse.</li>
-            <li>Victim-centric lens: fear, safety, and reporting challenges in stalking cases.</li>
-            <li>Analysis of documented misuse enabled by device design limitations, alert gaps, and Bluetooth-based tracking behavior.</li>
-            <li>Bridging research & practice: turning academic insights into SOC-ready artifacts.</li>
+            <li>Translate metadata, access, classification, and remediation data into clear governance reporting.</li>
+            <li>Support audit readiness through evidence packs, SOPs, runbooks, control narratives, and trackers.</li>
+            <li>Analyze access patterns, stale permissions, excessive access, and least-privilege gaps.</li>
+            <li>Build Power BI and Excel-based dashboards for compliance, DQ, access reviews, and remediation status.</li>
+            <li>Connect cybersecurity research with real-world privacy, safety, and governance risks.</li>
           </ul>
+
           <div class="pill-row">
-            <span class="pill">Cyberstalking & Harassment</span>
-            <span class="pill">IoT & Bluetooth Tracking</span>
-            <span class="pill">Threat Modeling</span>
-            <span class="pill">Digital Evidence Awareness</span>
+            <span class="pill">DAMA-DMBOK</span>
+            <span class="pill">Metadata</span>
+            <span class="pill">CDE Support</span>
+            <span class="pill">IAM</span>
+            <span class="pill">Audit Evidence</span>
+            <span class="pill">Power BI</span>
           </div>
         </div>
       </div>
 
-      <!-- PHOTO BLOCK -->
       <div class="about-photo-wrapper">
         <div class="about-photo-frame">
-          <img src="amrutha_cropped.jpg" alt="Amrutha Gyanam" class="about-photo-img">
+          <img src="amrutha_cropped.jpg" alt="Amrutha Gyanam" class="about-photo-img" />
         </div>
-
         <p class="about-photo-caption">
-          I enjoy exploring how everyday technologies shape people’s safety,<br>
-          and I love turning complex cyber risks into simple, human stories.
+          Building a career around data trust, access accountability,<br />
+          cloud security awareness, and responsible technology use.
         </p>
       </div>
     </section>
 
-    <!-- AirTag Project -->
-    <section id="project">
+    <section id="projects">
       <div class="section-header">
         <div class="section-title">
           <span class="dot"></span>
-          <span>Case Study: AirTag Crime Analysis</span>
+          <span>Portfolio Projects</span>
         </div>
         <p class="section-subtitle">
-          A deep-dive into how Apple AirTags are misused for stalking, vehicle theft, and covert tracking.
+          Selected project themes aligned with my resume and target roles.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <span class="chip-soft">Project 1</span>
+          <h3>Enterprise Data Governance & Cloud Data Security</h3>
+          <p>
+            Supported governance and security work across cloud and analytical environments, including
+            metadata documentation, sensitive data classification, IAM/S3 access review, lineage validation,
+            remediation tracking, and audit evidence preparation.
+          </p>
+          <div class="pill-row">
+            <span class="pill">AWS IAM</span>
+            <span class="pill">S3</span>
+            <span class="pill">Purview</span>
+            <span class="pill">Power BI</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="chip-soft">Project 2</span>
+          <h3>Retail Data Security & Access Analytics</h3>
+          <p>
+            Supported data security and governance reporting across retail datasets by documenting metadata,
+            access requirements, lineage references, DQ indicators, and dashboards for access trends,
+            operational exceptions, and remediation progress.
+          </p>
+          <div class="pill-row">
+            <span class="pill">SQL</span>
+            <span class="pill">Python</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">BigQuery</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="chip-soft">Project 3</span>
+          <h3>BI Modernization & Governance Reporting</h3>
+          <p>
+            Migrated 20+ Excel-based reports into governed Power BI dashboards, supported Snowflake and
+            Azure Data Factory reporting workflows, created SQL validation checks, and maintained
+            audit-ready documentation for finance, risk, and operational reporting.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Power BI</span>
+            <span class="pill">Snowflake</span>
+            <span class="pill">ADF</span>
+            <span class="pill">ServiceNow</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="chip-soft">Project 4</span>
+          <h3>Healthcare Reporting Governance & ETL Validation</h3>
+          <p>
+            Supported regulated reporting by documenting requirements, data dictionaries, validation rules,
+            source-to-report mappings, SSIS ETL workflows, SQL checks, UAT evidence, and audit-support artifacts.
+          </p>
+          <div class="pill-row">
+            <span class="pill">SSIS</span>
+            <span class="pill">SSRS</span>
+            <span class="pill">SQL Server</span>
+            <span class="pill">Visio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="airtag">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="dot"></span>
+          <span>Academic Research Project: AirTag Misuse Analysis</span>
+        </div>
+        <p class="section-subtitle">
+          Academic cybersecurity research on privacy risk, IoT misuse, and digital safety.
         </p>
       </div>
 
       <div class="grid-two">
         <div class="card">
-          <span class="chip-soft">Scope & Questions</span>
-          <h3>Research Focus</h3>
+          <span class="chip-soft">Research Focus</span>
+          <h3>Tracking or Stalking?</h3>
           <p>
-            This case study analyzes Apple AirTags as a <strong>dual-use IoT tracking technology</strong>.
-            The goal is to understand:
+            This academic research project analyzes Apple AirTags as a dual-use IoT tracking technology.
+            It examines how a legitimate consumer product can be misused for cyberstalking, vehicle tracking,
+            coercive control, and unauthorized surveillance.
           </p>
+
           <ul>
-            <li>How AirTags technically work (Bluetooth LE, U1, Find My network).</li>
-            <li>How attackers repurpose them for stalking and auto theft.</li>
-            <li>Where current anti-stalking protections fail victims.</li>
-            <li>What design, policy, and user-level changes can reduce harm.</li>
+            <li>Bluetooth LE, U1, and Find My network behavior.</li>
+            <li>Cyberstalking and unauthorized tracking misuse scenarios.</li>
+            <li>Anti-stalking alert gaps across iOS and Android users.</li>
+            <li>Privacy, consent, safety, and governance recommendations.</li>
           </ul>
-          <p>
-            The project combines <strong>technical analysis</strong>, <strong>behavioral research on stalking</strong>,
-            and <strong>real-world case reports</strong> into one cohesive security narrative.
-          </p>
         </div>
 
         <div class="card">
-          <span class="chip-soft">Tech & Threats</span>
-          <h3>Key Technical & Criminal Insights</h3>
-          <ul>
-            <li>AirTags lack GPS but leverage a <strong>crowdsourced Apple device mesh</strong> for location relay.</li>
-            <li>Documented cases show misuse enabled by speaker removal, delayed alerts, and design limitations resulting in <strong>silent or prolonged unauthorized tracking</strong>.</li>
-            <li>Cross-platform gaps: iOS users get better alerts than Android users, creating <strong>asymmetric victim protection</strong>.</li>
-            <li>Auto theft operations attach tags to vehicles in public areas and use them to track cars home.</li>
-          </ul>
+          <span class="chip-soft">Research Value</span>
+          <h3>Why It Matters</h3>
           <p>
-            The output is structured as a whitepaper and briefing deck and can be adapted into
-<strong>governance playbooks, compliance training, digital safety awareness, or policy guidance</strong>.
+            The study connects technical behavior, misuse patterns, user safety, policy considerations,
+            and governance gaps. It demonstrates cybersecurity research, privacy risk analysis,
+            technical communication, and responsible technology thinking.
           </p>
+
+          <div class="pill-row">
+            <span class="pill">IoT Misuse</span>
+            <span class="pill">Privacy Risk</span>
+            <span class="pill">Digital Safety</span>
+            <span class="pill">Governance</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Artifacts -->
     <section id="artifacts">
       <div class="section-header">
         <div class="section-title">
           <span class="dot"></span>
-          <span>Project Artifacts</span>
+          <span>Academic Project Artifact</span>
         </div>
         <p class="section-subtitle">
-          Downloadable assets you can share with hiring managers, security teams, or academic reviewers.
+          Research artifact connected to the AirTag academic project.
         </p>
       </div>
 
       <div class="artifact-list">
         <div class="artifact">
           <div>
-            <div class="artifact-main">AirTags in Criminal Use – Whitepaper</div>
+            <div class="artifact-main">Apple AirTag Misuse – Academic Research Brief</div>
             <div class="artifact-sub">
-              Professional cybersecurity report covering stalking, auto theft, and IoT-enabled surveillance risks.
+              One-page academic research brief covering IoT misuse, cyberstalking risk, privacy gaps,
+              and mitigation recommendations.
             </div>
           </div>
-          <a class="btn-link" href="Amrutha_AirTag_Whitepaper.pdf" target="_blank">Download PDF</a>
+          <a class="btn-link" href="Amrutha_AirTag_Research_Brief.pdf" target="_blank">Download PDF</a>
         </div>
 
         <div class="artifact">
           <div>
-            <div class="artifact-main">Briefing Deck – AirTag Crime Analysis</div>
+            <div class="artifact-main">AirTag Study Section</div>
             <div class="artifact-sub">
-              Presentation-ready slides for interviews, portfolio reviews, or conference-style talks.
+              Summary of the academic research project and its relevance to privacy, safety, and governance.
             </div>
           </div>
-          <a class="btn-link" href="Amrutha_AirTag_Presentation.pptx" target="_blank">Download PPTX</a>
+          <a class="btn-link" href="#airtag">View Study</a>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills">
       <div class="section-header">
         <div class="section-title">
           <span class="dot"></span>
-          <span>Security Skills Spotlight</span>
+          <span>Skills Spotlight</span>
         </div>
         <p class="section-subtitle">
-          Skills you can confidently bring to a SOC, cyber defense, or digital safety team.
+          Practical skills aligned with data governance, data security, IAM/GRC, and compliance roles.
         </p>
       </div>
 
       <div class="skills-grid">
         <div class="skill-card">
-          <h4>Threat & Abuse Analysis</h4>
-          <p>
-            Mapping how everyday technologies are turned into tools for harassment, stalking, and surveillance.
-          </p>
+          <h4>Data Governance</h4>
+          <p>Metadata, business glossary, ownership mapping, CDE support, lineage, and stewardship documentation.</p>
           <div class="skill-tags">
-            <span class="skill-tag">Cyberstalking</span>
-            <span class="skill-tag">Risk Assessment</span>
-            <span class="skill-tag">Threat Modeling</span>
+            <span class="skill-tag">DAMA-DMBOK</span>
+            <span class="skill-tag">CDEs</span>
+            <span class="skill-tag">Lineage</span>
           </div>
         </div>
 
         <div class="skill-card">
-          <h4>IoT & Bluetooth Tracking</h4>
-          <p>
-            Understanding the behavior of consumer tracking devices and their misuse pathways.
-          </p>
+          <h4>Data Security</h4>
+          <p>Sensitive data classification, DLP concepts, exposure review, remediation tracking, and secure handling.</p>
           <div class="skill-tags">
-            <span class="skill-tag">Bluetooth LE</span>
-            <span class="skill-tag">Find My Network</span>
-            <span class="skill-tag">IoT Abuse</span>
+            <span class="skill-tag">PII/PHI/PCI</span>
+            <span class="skill-tag">DSPM</span>
+            <span class="skill-tag">Remediation</span>
           </div>
         </div>
 
         <div class="skill-card">
-          <h4>Communication & Reporting</h4>
-          <p>
-            Producing whitepapers, briefings, and case summaries that are accessible to both technical and non-technical audiences.
-          </p>
+          <h4>IAM & Access Governance</h4>
+          <p>Access reviews, RBAC, least-privilege analysis, IAM/S3 permission review, and audit evidence support.</p>
           <div class="skill-tags">
-            <span class="skill-tag">Whitepapers</span>
-            <span class="skill-tag">Executive Briefings</span>
-            <span class="skill-tag">Stakeholder Education</span>
+            <span class="skill-tag">AWS IAM</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">CloudTrail</span>
           </div>
         </div>
 
         <div class="skill-card">
-          <h4>Victim-Centric Security</h4>
-          <p>
-            Centering victim safety, law enforcement collaboration, and practical mitigations in threat recommendations.
-          </p>
-<p>
-  As part of this research, relevant aspects of U.S. law and constitutional privacy protections,
-  including consent and reasonable expectation of privacy, were studied.
-  Informational discussions with the Murray City Police Department helped contextualize
-  real-world reporting processes, investigative limitations, and victim-support challenges.
-</p>
-
+          <h4>Analytics & Reporting</h4>
+          <p>Power BI, SQL, Excel, dashboards, scorecards, compliance reporting, and executive-ready summaries.</p>
           <div class="skill-tags">
-            <span class="skill-tag">Digital Safety</span>
-            <span class="skill-tag">Awareness Training</span>
-            <span class="skill-tag">Policy Insight</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Cloud & Data Platforms</h4>
+          <p>AWS, Azure, Snowflake, ADF, SQL Server, and project exposure to BigQuery/Dataflow.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Snowflake</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Cybersecurity Research</h4>
+          <p>Privacy risk analysis, IoT misuse, digital safety, threat narratives, and responsible technology governance.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">IoT</span>
+            <span class="skill-tag">Privacy</span>
+            <span class="skill-tag">Risk</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <div class="section-header">
         <div class="section-title">
@@ -909,28 +998,31 @@ I analyze how everyday technologies create privacy, safety, and governance risks
           <span>Contact & Links</span>
         </div>
         <p class="section-subtitle">
-          Open to roles where cybersecurity, research, and protecting people from digital harm intersect.
+          Open to data governance, data security, IAM/GRC, and cloud governance opportunities.
         </p>
       </div>
 
       <div class="grid-two">
         <div class="contact-card">
-          <h3>Let’s Collaborate on Cyber Safety</h3>
+          <h3>Contact</h3>
           <p>
-            If you’re building security products, digital safety features, or want to better understand cyberstalking and IoT misuse,
-            I’d be happy to walk you through this case study or adapt it to your environment.
+            Reach out for data governance, data security, IAM/GRC, cloud governance,
+            or cybersecurity research-related opportunities.
           </p>
+
           <div class="contact-row">
             <span class="label">Email</span>
             <span>amrutag.csa@gmail.com</span>
           </div>
+
           <div class="contact-row">
             <span class="label">Location</span>
-            <span>Dallas, TX (Open to remote)</span>
+            <span>Dallas, TX · Open to remote</span>
           </div>
+
           <div class="contact-links">
-            <span class="contact-pill">LinkedIn: www.linkedin.com/in/amruta-s</span>
-            <span class="contact-pill">GitHub: airtag-crime-analysis</span>
+            <a class="contact-pill" href="https://www.linkedin.com/in/amruta-s" target="_blank">LinkedIn</a>
+            <a class="contact-pill" href="#airtag">AirTag Academic Project</a>
           </div>
         </div>
       </div>
@@ -939,17 +1031,12 @@ I analyze how everyday technologies create privacy, safety, and governance risks
   </main>
 
   <footer>
-    © <span id="year"></span> Amrutha Gyanam · Cybersecurity Analyst · AirTag Crime Analysis Portfolio
+    © <span id="year"></span> Amrutha Gyanam · Data Governance & Data Security Portfolio
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
-
-
-
-
-
-
